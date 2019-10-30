@@ -110,7 +110,8 @@ countries_golds_list = []
 # END PROBLEM 3 SETUP
 
 # START PROBLEM 3 SOLUTION
-
+for key, value in countries_golds.items():
+    countries_golds_list.append(f"{key} won {value} gold medals")
 
 print(f"countries_golds_list = {countries_golds_list}")
 # END PROBLEM 3 SOLUTION
