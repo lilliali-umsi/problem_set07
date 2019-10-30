@@ -160,6 +160,14 @@ words_frequency = {'when': 0,
 # END PROBLEM 4 SETUP
 
 # START PROBLEM 4 SOLUTION
+lyrics = lyrics.split(' ')
+lower = []
+for word in lyrics:
+    lower.append(word.lower())
+
+for word in lower:
+    for key, value in words_frequency.items():
+        words_frequency[key] = lower.count(key)
 
 
 
