@@ -74,7 +74,8 @@ golds_sum = 0
 
 # START PROBLEM 2 SOLUTION
 # You are encouraged to use a for loop to sum up all the gold medal numbers
-
+for key, value in golds.items():
+    golds_sum = golds_sum + value
 
 print(f"golds_sum = {golds_sum}")
 # END PROBLEM 2 SOLUTION
