@@ -273,8 +273,19 @@ print(f"char_frequency = {char_frequency}")
 # START PROBLEM 5B SOLUTION
 
 def find_most_common_char(long_string):
-    pass
-
+    character_frequency = {}
+    long_string = long_string.split()
+    long_string_char = []
+    for word in long_string:
+        for character in word:
+            long_string_char.append(character.lower())
+            long_string_char.sort()
+    for character in long_string_char:
+        character_frequency[character.lower()] = long_string_char.count(character)
+    #return character_frequency
+    for key, value in character_frequency.items():
+        if value == max(character_frequency.values()):
+            return key
 
 # You can use "long_string_test1", "long_string_test2" to test your function
 # Note: passing these two tests doesn't guarantee your function is correct.
@@ -285,7 +296,8 @@ long_string_test1 = "away from joy you walk a little missing a tooth discussing 
 long_string_test2 = "smiling grip on what you want would never let me down I know you we say after never having met"
 # <find_most_common_char> should return "e" if <long_string_test2> was passed into as an argument
 
-
+print(find_most_common_char(long_string_test1))
+print(find_most_common_char(long_string_test2))
 # END PROBLEM 5B SOLUTION
 
 
