@@ -216,7 +216,21 @@ char_frequency = {}
 
 # START PROBLEM 5A SOLUTION
 
+long_lyrics = long_lyrics.split()
+long_lyrics_char = []
+for word in long_lyrics:
+    for character in word:
+        #print(character.lower())
+        #for key, value in char_frequency.items():
+        long_lyrics_char.append(character.lower())
+        long_lyrics_char.sort()
+long_lyrics_char.pop(0)
+for character in long_lyrics_char:
+    char_frequency[character.lower()] = long_lyrics_char.count(character)
+print(long_lyrics_char)
 
+
+    
 print(f"char_frequency = {char_frequency}")
 # END PROBLEM 5A SOLUTION
 
